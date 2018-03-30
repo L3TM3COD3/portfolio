@@ -1,0 +1,163 @@
+.auth {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../img/bg/forest.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.auth__main {
+    width: 380px;
+    height: 426px;
+    background: rgba(18, 38, 32, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    overflow: hidden;
+
+    &__dis {
+        border: 1px solid red;
+        width: 100%;
+        height: 88%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 35px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 35px;
+
+        &__title {
+            font-family: sansus;
+            font-size: 35px;
+            color: white;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .title-rectangle {
+            transform: translate(75%, 12px);
+            width: 89px;
+            height: 3px;
+            background-color: #ffffff;
+        }
+
+        &__form {
+            border: 1px solid yellow;
+            height: 70%;
+            width: 100%;
+
+            &__rows {
+                border: 1px solid white;
+                height: 52%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &__row {
+                    border: 1px solid red;
+                    display: flex;
+                    flex-direction: row;
+                    height: 42%;
+
+                    &__indicator {
+                        height: 100%;
+                        width: 12%;
+                        background-color: #f0efe9;
+                        border-top-left-radius: 25px;
+                        border-bottom-left-radius: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &__svg {
+                            fill: rgb(180, 180, 180)
+                        }
+                    }
+
+                    &__input {
+                        width: 88%;
+                        height: 100%;
+                        border-top-right-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                        outline: none;
+                        border: none;
+                        padding-left: 15px;
+                        font-size: 16px;
+                        font-family: roboto;
+                        color: #373e42;
+                        transition: .3s;
+                    }
+                }
+            }
+
+            &__captcha {
+                height: 48%;
+                border: 1px solid blue;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &__label {
+                    opacity: 0.8;
+                    color: #ffffff;
+                    font-family: Roboto;
+                    font-size: 16px;
+                }
+
+                &__quest {
+                    border: 1px solid red;
+
+                    &__title {
+                        opacity: 0.8;
+                        color: #ffffff;
+                        font-family: robotomedium;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__btns {
+        width: 100%;
+        height: 12%;
+        display: flex;
+
+        &__btn {
+            height: 100%;
+            width: 100%;
+            background: $g2;
+            transition: .3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: robotomedium;
+
+            &--bordered {
+                border-left: 2px solid white;
+            }
+
+            &:hover {
+                background: $g1;
+            }
+        }
+    }
+}
+
+.author {
+    position: absolute;
+    bottom: 5%;
+    color: white;
+    font-family: Roboto;
+    font-size: 16px;
+}

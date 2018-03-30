@@ -1,0 +1,113 @@
+.polygon {
+    border: 5px solid red;
+    width: 100%;
+    height: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3.5%;
+    padding-bottom: 4%;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+}
+.checkbox + label {
+  top: 10%;
+  left: 10%;
+  padding: 0 0 0 60px;
+  cursor: pointer;
+  color: red;
+  font-size: 24px;
+}
+
+.checkbox + label:before, label::after {
+    position: absolute;
+    content: "";
+    left: 100px;
+    top: 25%;
+    width: 50px;
+    height: 80px;
+    background: white;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+
+.checkbox + label::after {
+    background: white;
+    left: 50px;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+
+}
+
+.checkbox:checked + label:before, label::after {
+  background: red;
+}
+
+.checkbox:checked + label::after {
+    background: red;
+  }
+
+
+// .radio {
+//     position: absolute;
+//     z-index: -1;
+//     opacity: 0;
+//     margin: 10px 0 0 7px;
+//   }
+//   .radio + label {
+//     position: relative;
+//     padding: 0 0 0 35px;
+//     cursor: pointer;
+//   }
+//   .radio + label:before {
+//     content: '';
+//     position: absolute;
+//     top: -3px;
+//     left: 0;
+//     width: 22px;
+//     height: 22px;
+//     border: 1px solid #CDD1DA;
+//     border-radius: 50%;
+//     background: #FFF;
+//   }
+//   .radio + label:after {
+//     content: '';
+//     position: absolute;
+//     top: 1px;
+//     left: 4px;
+//     width: 16px;
+//     height: 16px;
+//     border-radius: 50%;
+//     background: #9FD468;
+//     box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+//     opacity: 0;
+//     transition: .2s;
+//   }
+//   .radio:checked + label:after {
+//     opacity: 1;
+//   }
+//   .radio:focus + label:before {
+//     box-shadow: 0 0 0 3px rgba(255,255,0,.7);
+//   }

@@ -1,0 +1,138 @@
+.welcome {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../img/bg/forest.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.author {
+    position: absolute;
+    bottom: 5%;
+    color: white;
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+.welcome__auth-btn {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 180px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: robotomedium;
+    transition: .3s;
+
+    &:hover {
+        background: $g1;
+        border: 2px solid $g2;
+    }
+}
+
+.welcome__main {
+    width: 380px;
+    height: 395px;
+    background: rgba(18, 38, 32, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    overflow: hidden;
+
+    &__info {
+        width: 100%;
+        height: 88%;
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &__who {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__photo {
+                width: 141px;
+                height: 141px;
+                overflow: hidden;
+                border-radius: 50%;
+
+                &__pic {
+                    max-width: 100%;
+                }
+            }
+
+            &__name {
+                color: #ffffff;
+                font-family: robotomedium;
+                font-size: 28px;
+            }
+
+            &__desc {
+                opacity: 0.8;
+                color: #ffffff;
+                font-family: Roboto;
+                font-size: 16px;
+            }
+        }
+
+        &__socials {
+            display: flex;
+            width: 35%;
+            justify-content: space-between;
+            align-items: center;
+            transition: .3s;
+
+            &__link {
+                transition: .3s;
+
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        height: 12%;
+        display: flex;
+
+        &__btn {
+            width: 34%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $g2;
+            transition: .3s;
+            font-family: robotomedium;
+
+            &--bordered {
+                border-left: 1px solid white;
+                border-right: 1px solid white;
+            }
+
+            &:hover {
+                background: $g1;
+            }
+        }
+    }
+}

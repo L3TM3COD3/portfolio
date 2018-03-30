@@ -1,0 +1,17 @@
+//сonfig
+@import "config/_media";
+@import "config/_mixins";
+@import "config/_variables";
+
+//layout
+@import "layout/_base";
+@import "layout/_fonts";
+@import "layout/_adjustment";
+
+//sections
+@import "sections/index";
+@import "sections/auth";
+@import "sections/blog";
+@import "sections/about";
+@import "sections/portfolio";
+@import "sections/polygon";

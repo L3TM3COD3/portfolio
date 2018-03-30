@@ -1,0 +1,46 @@
+// responsive
+@function rem($px) {
+	@return $px / 16px+0rem;
+}
+
+//large title 
+@mixin large-title {
+  font-family: sansus;
+  font-size: 63px;
+  color: $black;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+//small title 
+@mixin small-title {
+  font-family: sansus;
+  font-size: 35px;
+  color: $grey;
+  margin-bottom: 40px;
+}
+
+//main txt 
+@mixin main-txt {
+  font-family: roboto;
+  font-size: 16px;
+  color: $black;
+}
+
+//txt accent
+@mixin txt-accent {
+  font-family: robotomedium;
+  font-size: 16px;
+  color: $green;
+}
+
+//link 
+@mixin large-title {
+  font-family: robotomedium;
+  color: #6da3bd;
+  text-decoration: underline;
+
+  &:hover {
+	  text-decoration: none;
+  }
+}
