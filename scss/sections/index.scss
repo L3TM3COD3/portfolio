@@ -73,6 +73,7 @@
                 height: 141px;
                 overflow: hidden;
                 border-radius: 50%;
+                border: 1px solid $g2;
 
                 &__pic {
                     max-width: 100%;
@@ -83,6 +84,7 @@
                 color: #ffffff;
                 font-family: robotomedium;
                 font-size: 28px;
+                margin-top: 3%;
             }
 
             &__desc {
@@ -103,8 +105,13 @@
             &__link {
                 transition: .3s;
 
-                &:hover {
-                    opacity: .5;
+                .social-svg {
+                    transition: .2s;
+                    fill: white;
+
+                    &:hover {
+                        fill: $g1;
+                    }
                 }
             }
         }

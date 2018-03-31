@@ -21,7 +21,7 @@
                         <div class="auth__main__dis__form__rows">
                             <div class="auth__main__dis__form__rows__row">
                                 <div class="auth__main__dis__form__rows__row__indicator">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="17px" viewBox="0 0 14.137 15.422" enable-background="new 0 0 14.137 15.422" xml:space="preserve">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="17px" viewbox="0 0 14.137 15.422" enable-background="new 0 0 14.137 15.422" xml:space="preserve">
                                         <g>
                                             <path class="auth__main__dis__form__rows__row__indicator__svg" d="M11.456,15.422H2.681C1.084,15.422,0,14.448,0,12.821c0-2.269,0.532-5.753,3.474-5.753
                                                 c0.312,0,1.627,1.396,3.595,1.396s3.283-1.396,3.595-1.396c2.941,0,3.474,3.484,3.474,5.753
@@ -34,7 +34,7 @@
                             </div>
                             <div class="auth__main__dis__form__rows__row">
                                 <div class="auth__main__dis__form__rows__row__indicator">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="17px" viewBox="0 0 16.897 15.984" enable-background="new 0 0 16.897 15.984" xml:space="preserve">
+                                    <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="17px" viewbox="0 0 16.897 15.984" enable-background="new 0 0 16.897 15.984" xml:space="preserve">
                                         <g>
                                             <path class="auth__main__dis__form__rows__row__indicator__svg" d="M15.743,12.078c-0.261,0-1.074-0.943-1.285-1.154l-0.964,0.964l2.209,2.209
                                                 c0.181,0.181,0.281,0.432,0.281,0.683c0,0.563-0.643,1.205-1.205,1.205c-0.251,0-0.502-0.101-0.683-0.281L7.359,8.966
@@ -50,23 +50,25 @@
                                 <input type="password" placeholder="Пароль" class="auth__main__dis__form__rows__row__input">
                             </div>
                         </div>     
-                        <div class="auth__main__dis__form__captcha">
-                            <label class="auth__main__dis__form__captcha__label">
-                                <input type="checkbox" class="auth__main__dis__form__captcha__check">
-                                Я человек
-                            </label>
-                            <div class="auth__main__dis__form__captcha__quest">
-                                <div class="auth__main__dis__form__captcha__quest__title">Вы точно не робот?</div>
-                                <label for="radio-yes" class="auth__main__dis__form__captcha__label">
-                                    <input type="radio" name="radio-captcha" id="radio-yes" class="auth__main__dis__form__captcha__quest__radio">
-                                    Да
-                                </label>
-                                <label for="radio-no" class="auth__main__dis__form__captcha__label">
-                                    <input type="radio" name="radio-captcha" id="radio-no" class="auth__main__dis__form__captcha__quest__radio">
-                                    Не уверен
-                                </label>
+                        <div class="captcha">
+                            <div class="captcha__human">
+                                <input type="checkbox" class="captcha__human__checkbox" id="checkbox">
+		                        <label for="checkbox"><span class="captcha__human__label">Я человек</span></label>
                             </div>
-                        </div>             
+                            <div class="captcha__ask">
+                                <p class="captcha__ask__title">Вы точно не робот?</p>
+                                <div class="captcha__ask__answer">
+                                    <div class="captcha__ask__answer__yes">
+                                        <input type="radio" class="captcha__ask__answer__yes__radio" name="radio-btn" id="radio-1">
+                                        <label for="radio-1"><span class="captcha__ask__answer__yes__label">Да</span></label>
+                                    </div>
+                                    <div class="captcha__ask__answer__no">
+                                        <input type="radio" class="captcha__ask__answer__no__radio" name="radio-btn" id="radio-2">
+                                        <label for="radio-2"><span class="captcha__ask__answer__no__label">Не уверен</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="auth__main__btns">

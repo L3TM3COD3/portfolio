@@ -23,17 +23,16 @@
     overflow: hidden;
 
     &__dis {
-        border: 1px solid red;
         width: 100%;
         height: 88%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding-top: 35px;
+        padding-top: 30px;
         padding-left: 20px;
         padding-right: 20px;
-        padding-bottom: 35px;
+        padding-bottom: 30px;
 
         &__title {
             font-family: sansus;
@@ -51,19 +50,19 @@
         }
 
         &__form {
-            border: 1px solid yellow;
             height: 70%;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             &__rows {
-                border: 1px solid white;
                 height: 52%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
 
                 &__row {
-                    border: 1px solid red;
                     display: flex;
                     flex-direction: row;
                     height: 42%;
@@ -99,32 +98,170 @@
                 }
             }
 
-            &__captcha {
-                height: 48%;
-                border: 1px solid blue;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+           .captcha {
+               width: 100%;
+               height: 40%;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;  
 
-                &__label {
-                    opacity: 0.8;
-                    color: #ffffff;
-                    font-family: Roboto;
-                    font-size: 16px;
-                }
+               &__human {
+                   width: 100%;
+                   display: flex;
+                   align-items: center;
 
-                &__quest {
-                    border: 1px solid red;
-
-                    &__title {
+                   &__label {
+                        color: white;
+                        position: absolute;
+                        left: 150%;
+                        top: 0%;
                         opacity: 0.8;
                         color: #ffffff;
-                        font-family: robotomedium;
-                        font-size: 16px;
-                    }
-                }
-            }
+                        font-family: Roboto;
+                        font-size: 16px;    
+                        width: 370%;
+                   }
+
+                   &__checkbox {
+                        position: absolute;
+                        z-index: -1;
+                        opacity: 0;
+                        margin: 10px 0 0 20px;
+
+                        & + label {
+                            width: 22px;
+                            height: 22px;
+                            background: $g1;
+                            border-radius: 3px;
+                            cursor: pointer;
+                            position: relative;
+                            margin-left: 32%;
+                        }
+
+                        &:checked + label:after {
+                            content: ' ';
+                            background: url('../../img/icons/check.svg') no-repeat;
+                            background-size: contain;
+                            width: 12px;
+                            height: 9px;
+                            position: absolute;
+                            top: 30%;
+                            left: 25%;
+                        }
+                   }
+               }
+
+               &__ask {
+                   width: 100%;
+                   height: 62%;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: space-between;
+                   align-items: center;
+
+                   &__title {
+                        opacity: 0.8;
+                        color: #ffffff;
+                        font-family: Robotomedium;
+                   }
+
+                   &__answer {
+                       display: flex;
+                       justify-content: space-evenly;
+                       width: 100%;
+
+                       &__no {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        width: 33%;
+
+                           &__label {
+                            position: absolute;
+                            left: 150%;
+                            top: -10%;
+                            opacity: 0.8;
+                            color: #ffffff;
+                            font-family: Roboto;
+                            font-size: 16px;    
+                            width: 400%;
+                           }
+
+                           &__radio {
+                                position: absolute;
+                                z-index: -1;
+                                opacity: 0;
+                                margin: 10px 0 0 20px;
+
+                                & + label {
+                                    width: 21px;
+                                    height: 21px;
+                                    border: 1px solid #cccccc;
+                                    background-color: #ffffff;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    position: relative;
+                                }
+
+                                &:checked + label::after {
+                                    content: ' ';
+                                    width: 15px;
+                                    height: 15px;
+                                    background-color: $g1;
+                                    position: absolute;
+                                    border-radius: 50%;
+                                    top: 11%;
+                                    left: 11%;
+                                }
+                           }
+                       }
+
+                       &__yes {
+                        display: flex;
+                        align-items: center;
+                        width: 17%;
+
+                           &__label {
+                            position: absolute;
+                            left: 150%;
+                            top: -10%;
+                            opacity: 0.8;
+                            color: #ffffff;
+                            font-family: Roboto;
+                            font-size: 16px;
+                           }
+
+                           &__radio {
+                                position: absolute;
+                                z-index: -1;
+                                opacity: 0;
+                                margin: 10px 0 0 20px;
+
+                                & + label {
+                                    width: 21px;
+                                    height: 21px;
+                                    border: 1px solid #cccccc;
+                                    background-color: #ffffff;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    position: relative;
+                                }
+
+                                &:checked + label::after {
+                                    content: ' ';
+                                    width: 15px;
+                                    height: 15px;
+                                    background-color: $g1;
+                                    position: absolute;
+                                    border-radius: 50%;
+                                    top: 11%;
+                                    left: 11%;
+                                }
+                            }
+                        }
+                   }
+               }
+           }
         }
     }
 
