@@ -35,18 +35,7 @@
         padding-bottom: 30px;
 
         &__title {
-            font-family: sansus;
-            font-size: 35px;
-            color: white;
-            text-transform: uppercase;
-            position: relative;
-        }
-
-        .title-rectangle {
-            transform: translate(75%, 12px);
-            width: 89px;
-            height: 3px;
-            background-color: #ffffff;
+            @include small-title(white, 0%, white, 120%, 30%);
         }
 
         &__form {
@@ -94,6 +83,11 @@
                         font-family: roboto;
                         color: #373e42;
                         transition: .3s;
+                        border: 2px solid transparent;
+
+                        &:focus {
+                            border: 2px solid $g2;
+                        }
                     }
                 }
             }

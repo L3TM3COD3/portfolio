@@ -4,20 +4,44 @@
 }
 
 //large title 
-@mixin large-title {
+@mixin large-title($color, $mt, $mb, $stick-color, $top, $left) {
   font-family: sansus;
   font-size: 63px;
-  color: $black;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  color: $color;
+  margin-top: $mt;
+  margin-bottom: $mb;
+  text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    content: ' ';
+    background: $stick-color;
+    width: 89px;
+    height: 3px;
+    position: absolute;
+    top: $top;
+    left: $left;
+  }
 }
 
 //small title 
-@mixin small-title {
+@mixin small-title($color, $mb, $stick-color, $top, $left) {
   font-family: sansus;
   font-size: 35px;
-  color: $grey;
-  margin-bottom: 40px;
+  color: $color;
+  margin-bottom: $mb;
+  text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    content: ' ';
+    background: $stick-color;
+    width: 89px;
+    height: 3px;
+    position: absolute;
+    top: $top;
+    left: $left;
+  }
 }
 
 //main txt 
@@ -35,7 +59,7 @@
 }
 
 //link 
-@mixin large-title {
+@mixin link {
   font-family: robotomedium;
   color: #6da3bd;
   text-decoration: underline;

@@ -1,0 +1,55 @@
+.map {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.contacts {
+    width: 25%;
+    height: 45%;
+    background-color: #f4f5f0;
+    opacity: 0.85;
+    position: absolute;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 1% 2% 1%;
+
+    &__title {
+        @include small-title($black, 0%, $black, 100%, 20%);
+    }
+
+    &__list {
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+
+        &__item {
+            display: flex;
+            color: $black;
+            font-family: Roboto;
+            font-size: 16px;
+
+            &__icon {
+                margin-right: 7%;
+            }
+
+            &__txt {
+                color: $black;
+            }
+        }
+    }
+}
+
