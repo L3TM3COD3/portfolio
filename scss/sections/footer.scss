@@ -1,0 +1,104 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 17%;
+    position: absolute;
+    bottom: 0%;
+}
+
+.footer__main {
+    height: 80%;
+    background-color: #373e42;
+    opacity: 0.85;
+
+    &__list {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        @include main-txt (white);
+
+        &__item {
+            padding-left: 1.5%;
+            height: 70%;
+            width: 30%;
+            border-left: 1px solid rgba(255, 255, 255, .2);
+            
+            &:first-child {
+                border-left: none;
+                padding-left: 0%;
+            }
+
+            &--nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            &__nav {
+                font-family: robotomedium;
+                display: flex;
+                width: 85%;
+                justify-content: space-between;
+
+                &__link:hover {
+                    transition: .3s;
+
+                    &:hover {
+                        opacity: .6;
+                    }
+                }
+            }
+
+            .socials {
+                display: flex;
+                align-items: center;
+                transition: .3s;
+        
+                &-svg {
+                    opacity: 0.5;
+                    margin-right: 20px;
+                    transition: .2s;
+                    fill: white;
+        
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .phrase {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &__txt {
+                    opacity: 0.6;
+                    color: #ffffff;
+                    font-family: "robotolight_italic";
+                    font-size: 16px;
+                }
+
+                &__author {
+                    font-family: robotomedium_italic;
+                    opacity: .8;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.footer__cr {
+    height: 20%;
+    background-color: #6c9c5a;
+    opacity: 0.85;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: robotolight;
+}

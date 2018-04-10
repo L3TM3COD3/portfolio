@@ -143,7 +143,8 @@ section {
   bottom: 5%;
   color: white;
   font-family: Roboto;
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: robotolight; }
 
 .welcome__auth-btn {
   position: absolute;
@@ -660,27 +661,27 @@ section {
   -ms-flex-align: center;
   align-items: center;
   padding: 0 1.5% 0 1.5%; }
-  .header__social-svg {
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s;
-    fill: white; }
-    .header__social-svg:hover {
-      opacity: .7; }
-  .header__socials {
+  .header .socials {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 8%;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
+    .header .socials-svg {
+      margin-right: 20px;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s;
+      fill: white; }
+      .header .socials-svg:hover {
+        opacity: .7; }
 
 .hero__bottom {
   width: 100%;
@@ -814,7 +815,7 @@ section {
       .about__main__info__desc__txt {
         font-family: roboto;
         font-size: 16px;
-        color: #373e42;
+        color: #566358;
         text-align: left; }
 
 .about__skills {
@@ -854,7 +855,7 @@ section {
   .about__skills__info {
     font-family: roboto;
     font-size: 16px;
-    color: #373e42;
+    color: #566358;
     height: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -897,6 +898,129 @@ section {
           font-family: robotomedium;
           font-size: 28px; }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 17%;
+  position: absolute;
+  bottom: 0%; }
+
+.footer__main {
+  height: 80%;
+  background-color: #373e42;
+  opacity: 0.85; }
+  .footer__main__list {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    font-family: roboto;
+    font-size: 16px;
+    color: white; }
+    .footer__main__list__item {
+      padding-left: 1.5%;
+      height: 70%;
+      width: 30%;
+      border-left: 1px solid rgba(255, 255, 255, 0.2); }
+      .footer__main__list__item:first-child {
+        border-left: none;
+        padding-left: 0%; }
+      .footer__main__list__item--nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+      .footer__main__list__item__nav {
+        font-family: robotomedium;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 85%;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        .footer__main__list__item__nav__link:hover {
+          -webkit-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s; }
+          .footer__main__list__item__nav__link:hover:hover {
+            opacity: .6; }
+      .footer__main__list__item .socials {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+        .footer__main__list__item .socials-svg {
+          opacity: 0.5;
+          margin-right: 20px;
+          -webkit-transition: .2s;
+          -o-transition: .2s;
+          transition: .2s;
+          fill: white; }
+          .footer__main__list__item .socials-svg:hover {
+            opacity: 1; }
+      .footer__main__list__item .phrase {
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        .footer__main__list__item .phrase__txt {
+          opacity: 0.6;
+          color: #ffffff;
+          font-family: "robotolight_italic";
+          font-size: 16px; }
+        .footer__main__list__item .phrase__author {
+          font-family: robotomedium_italic;
+          opacity: .8;
+          color: white; }
+
+.footer__cr {
+  height: 20%;
+  background-color: #6c9c5a;
+  opacity: 0.85;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: robotolight; }
+
 .map {
   height: 100vh;
   width: 100vw;
@@ -909,19 +1033,24 @@ section {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative; }
+  position: relative;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 #map {
   height: 100%;
   width: 100%; }
 
 .contacts {
-  width: 25%;
-  height: 45%;
+  width: 20%;
+  height: 35%;
   background-color: #f4f5f0;
   opacity: 0.85;
   position: absolute;
-  top: 25%;
+  top: 22%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -949,7 +1078,7 @@ section {
       width: 89px;
       height: 3px;
       position: absolute;
-      top: 100%;
+      top: 130%;
       left: 20%; }
   .contacts__list {
     height: 60%;

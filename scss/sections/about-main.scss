@@ -60,7 +60,7 @@
             }
 
             &__txt {
-                @include main-txt;
+                @include main-txt ($grey);
                 text-align: left;
             }
         }
@@ -83,7 +83,7 @@
     }
 
     &__info {
-        @include main-txt;
+        @include main-txt ($grey);
         height: 80%;
         display: flex;
         justify-content: space-between;
