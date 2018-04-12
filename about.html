@@ -7,6 +7,8 @@
 	<title>Обо мне</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main/main.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/canvasMenu.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -59,7 +61,7 @@
                         </svg>
                     </a> 
 				</div>
-				<div class="header__menu">
+				<d id="nav" class="header__menu">
 					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						width="40px" height="35px" viewBox="0 0 40 35" enable-background="new 0 0 40 35" xml:space="preserve">
 				   <path fill="#FFFFFF" d="M40,2.5C40,3.881,38.881,5,37.5,5h-35C1.119,5,0,3.881,0,2.5l0,0C0,1.119,1.119,0,2.5,0h35
@@ -69,7 +71,7 @@
 				   <path fill="#FFFFFF" d="M40,32.5c0,1.381-1.119,2.5-2.5,2.5h-35C1.119,35,0,33.881,0,32.5l0,0C0,31.119,1.119,30,2.5,30h35
 					   C38.881,30,40,31.119,40,32.5L40,32.5z"/>
 				   </svg>
-				</div>
+				</d>
 			</header>
 			<div class="welcome__main__info__who welcome__main__info__who--about">
 					<svg version="1.1" id="Layer_1" class="hero__about-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -538,5 +540,13 @@
 		</section>
 	</div>
 </body>
+<div id="modal_form">
+	<span id="modal_close">X</span>
+	<a href="porfolio.html" class="modal__link">Мои работы</a>
+	<a href="about.html" class="modal__link">Обо мне</a>
+	<a href="blog.html" class="modal__link">Блог</a>
+	<a href="login.html" class="modal__link">Авторизация</a>
+</div>
+<div id="overlay"></div>
 <script src="js/map.js"></script>
 </html>

@@ -1,11 +1,6 @@
 var map;
 
 function initMap() {
-  marker = new google.maps.Marker({
-  position: {lat: 56.838284, lng: 60.603616},
-  map: map,
-  icon: '../img/icons/map_n.svg'
-});
 
   map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 56.844613, lng: 60.549532},
