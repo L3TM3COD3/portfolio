@@ -1,0 +1,223 @@
+.feed {
+    height: 1245px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.feed__main {
+    background-image: url('../../img/bg/feedback.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feed__wrap {
+    height: 83%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.feed__title {
+    height: 170px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &__txt {
+        @include large-title($black, 0%, 0%, $black, 130%, 40%);
+
+        &::before {
+            content: ' ';
+            background-image: url('../../img/icons/about_header-g.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            opacity: .1;
+            left: 0%;
+            top: -35%;
+            height: 160%;
+            width: 100%;
+        }
+    }
+}
+
+.feed__list {
+    display: flex;
+    width: 60%;
+    height: 27%;
+
+    &__item {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        &::before {
+            content: ' ';
+            position: absolute;
+            height: 55%;
+            width: 55%;
+            top: 22%;
+            left: -16%;
+            opacity: .2;
+            background-image: url('../../img/icons/quotes.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &__photo {
+            overflow: hidden;
+
+            &-pic {
+                border-radius: 150%;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        &__txt {
+            display: flex;
+            height: 50%;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            &__phrase {
+                @include main-txt ($black);
+                font-family: robotoitalic;
+            }
+
+            &__desc__author {
+                @include main-txt ($g1);
+                font-family: robotobold_italic;
+            }
+
+            &__desc__whois {
+                @include main-txt ($black);
+                font-family: robotoitalic;
+            }
+        }
+    }
+}
+
+.form {
+    width: 25%;
+    height: 50%;
+    background-color:  rgba(218, 219, 214, .5);
+    border-radius: 7px;
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__label {
+            @include small-title($grey, 0%, $grey, 130%,  35%);
+            text-align: center;
+        }
+    }
+
+    &__inputs {
+        margin-top: 3%;
+        height: 60%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &__field {
+            opacity: .85;
+            border-radius: 25px;
+            width: 100%;
+            height: 17%;
+            padding: 5% 5% 5% 7%;
+            border: none;
+            outline: none;
+            @include main-txt($black);
+            border: 2px solid transparent;
+            transition: .3s;
+
+            &:focus {
+                border: 2px solid $g1;
+            }
+        }
+
+        #msg {
+            resize: none;
+            height: 50%;
+            border-radius: 25px;
+            line-height: 1.6;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        height: 10%;
+        width: 100%;
+
+        &__btn {
+            height: 100%;
+            width: 50%;
+            background: $g1;
+            transition: .3s;
+            cursor: pointer;
+            @include main-txt(white);
+            opacity: .8;
+            border: none;
+            outline: none;
+
+            &:first-child {
+                border-right: 2px solid white;
+            }
+
+            &:hover {
+                background: $g2;
+            }
+        }
+    }
+}
+
+.feed__leaves-pic {
+    position: absolute;
+    
+    &--1 {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+    }
+
+    &--2 {
+        position: absolute;
+        top: -8%;
+        left: 15%;
+    }
+
+    &--3 {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+    }
+}

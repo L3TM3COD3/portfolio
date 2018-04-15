@@ -2,9 +2,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 17%;
+    height: 185px;
     position: absolute;
     bottom: 0%;
+
+    &--blog {
+        position: static;
+    }
 }
 
 .footer__main {

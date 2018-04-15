@@ -1,0 +1,123 @@
+.about {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.about__main {
+    background: #EBEFE2;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 1% 2% 7%;
+
+    &__title {
+        @include large-title($black, 0%, 0%, $black, 11%, 30%);
+
+        &::before {
+            content: ' ';
+            background-image: url('../../img/icons/about_header-g.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            opacity: 0.1;
+            left: -25%;
+            top: -4%;
+            height: 15%;
+            width: 155%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 75%;
+        width: 55%;
+
+        &__photo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &__pic {
+                max-width: 55%;
+            }
+        }
+
+        &__desc {
+            display: flex;
+            height: 45%;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            &__title {
+                @include small-title($grey, 0%, $grey, 120%, -5%);
+            }
+
+            &__txt {
+                @include main-txt ($grey);
+                text-align: left;
+            }
+        }
+    }
+}
+
+.about__skills {
+    background: #F4F5F0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3% 0% 2% 1%;
+
+    &__title {
+        @include small-title($grey, 0%, $grey, 120%, 32%);
+        text-align: center;
+    }
+
+    &__info {
+        @include main-txt ($grey);
+        height: 80%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 0% 7% 0% 1%;
+
+        &__list {
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &__item {
+                width: 100%;
+                height: 32%;
+
+                .skill {
+                    height: 65%;
+                    display: flex;
+
+                    &__item {
+                        width: 16%;
+                        height: 100%;
+                        background: $g1;
+                        margin-right: 9%;
+                    }
+                }
+
+                &__title {
+                    color: $grey;
+                    font-family: robotomedium;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
