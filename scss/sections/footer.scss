@@ -5,6 +5,9 @@
     height: rem(185px);
     position: absolute;
     bottom: 0%;
+    @include laptop {
+        font-size: 14px;
+    }
 
     &--blog {
         position: static;
@@ -29,6 +32,9 @@
             height: 70%;
             width: 30%;
             border-left: rem(1px) solid rgba(255, 255, 255, .2);
+            @include laptop {
+                font-size: 14px;
+            }
             
             &:first-child {
                 border-left: none;
@@ -47,10 +53,15 @@
                 width: 100%;
                 justify-content: space-between;
 
-                &__link:hover {
+                &__link {
                     transition: .3s;
 
                     &:hover {
+                        opacity: .6;
+                    }
+                    
+                    &--active {
+                        cursor: pointer;
                         opacity: .6;
                     }
                 }

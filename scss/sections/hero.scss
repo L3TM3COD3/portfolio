@@ -27,7 +27,13 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        opacity: .2;    
+        opacity: .2;   
+        
+        @include laptop {
+            height: 80%;
+            width: 80%;
+            top: 5%;
+        }
     }
 
     &--works::after {
@@ -41,6 +47,12 @@
         background-size: contain;
         background-position: center;
         opacity: .2;
+
+        @include laptop {
+            height: 85%;
+            width: 85%;
+            top: 5%;
+        }
     }
 }
 
@@ -53,7 +65,7 @@
     padding: 0 2.5% 0 2.5%;
 
     &--blog {
-        height: 30%;
+        height: 15%;
     }
 
     .socials {
@@ -73,8 +85,7 @@
         }
     }
 
-    &__menu {
-        border: rem(1px) solid red;
+    &__menu {   
         transition: .3s;
         
         &:hover {
@@ -92,17 +103,18 @@
 
     .triangles-svg {
         position: absolute;
+        
+        .cls-1, .cls-2 {
+            @include tablet {
+                fill: #ebefe2;
+            } 
+        }
     }
 }
 
 
 .welcome__main__info__who--about {
     z-index: 10;
-
-    &--blog {
-        margin-bottom: 5%;
-        height: 100%;
-    }
 }
 
 .hero__about-svg {

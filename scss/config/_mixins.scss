@@ -6,18 +6,18 @@
 //large title 
 @mixin large-title($color, $mt, $mb, $stick-color, $top, $left) {
   font-family: sansus;
-  font-size: 63px;
+  font-size: rem(63px);
   color: $color;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: $mt;
+  margin-bottom: $mb;
   text-transform: uppercase;
   position: relative;
 
   &::after {
     content: ' ';
     background: $stick-color;
-    width: 89px;
-    height: 3px;
+    width: rem(89px);
+    height: rem(3px);
     position: absolute;
     top: $top;
     left: $left;
@@ -27,22 +27,22 @@
 //small title 
 @mixin small-title($color, $mb, $stick-color, $top, $left) {
   font-family: sansus;
-  font-size: 35px;
+  font-size: rem(35px);
   color: $color;
-  margin-bottom: 40px;
+  margin-bottom: $mb;
   text-transform: uppercase;
   position: relative;
 
   &::after {
     content: ' ';
     background: $stick-color;
-    width: 89px;
-    height: 3px;
+    width: rem(89px);
+    height: rem(3px);
     position: absolute;
     top: $top;
     left: $left;
 
-    @include laptop {
+    @include desktop {
       left: 33%;
     }
   }
@@ -51,14 +51,14 @@
 //main txt 
 @mixin main-txt ($color) {
   font-family: roboto;
-  font-size: 16px;
+  font-size: rem(16px);
   color: $color;
 }
 
 //txt accent
 @mixin txt-accent {
   font-family: robotomedium;
-  font-size: 16px;
+  font-size: rem(16px);
   color: $green;
 }
 

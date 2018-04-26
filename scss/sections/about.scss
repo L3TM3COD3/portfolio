@@ -1,7 +1,8 @@
 .about {
-    height: 100vh;
-    width: 100vw;
     display: flex;
+    @include tablet {
+        flex-direction: column;
+    }
 }
 
 .about__main {
@@ -10,24 +11,52 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 3% 1% 2% 7%;
+    padding: 3% 3% 2% 7%;
+
+    @include laptop {
+        padding: 5% 1% 15% 1%;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    @include tablet {
+        width: 100%;
+        align-items: center;
+    }
 
     &__title {
-        @include large-title($black, 0%, 0%, $black, 15%, 30%);
-
-        &::before {
-            content: ' ';
-            background-image: url('../../img/icons/about_header-g.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            position: absolute;
-            opacity: 0.1;
-            left: -25%;
-            top: -4%;
-            height: 15%;
-            width: 155%;
+        @include laptop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        &__txt {
+            text-align: center;
+            @include large-title($black, 0px, 70px, $black, 105%, 30%);
+
+            &::before {
+                content: ' ';
+                background-image: url('../../img/icons/about_header-g.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                position: absolute;
+                opacity: 0.1;
+                left: -30%;
+                top: -55%;
+                height: 170%;
+                width: 170%;
+
+                @include laptop {
+                    left: -10%;
+                    top: -30%;
+                    width: 135%;
+                    height: 135%;
+                }
+            }
+        }
+        
     }
 
     &__info {
@@ -42,6 +71,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 10%;
 
             &__pic {
                 max-width: 55%;
@@ -56,9 +86,9 @@
             align-items: center;
 
             &__title {
-                @include small-title($grey, 0%, $grey, 120%, -5%);
+                @include small-title($grey, 40px, $grey, 120%, -5%);
                 &::after {
-                    @include laptop {
+                    @include desktop {
                         left: -5%;  
                     }
                 }
@@ -67,6 +97,12 @@
             &__txt {
                 @include main-txt ($grey);
                 text-align: left;
+                @include laptop {
+                    width: 165%;
+                }
+                @include tablet {
+                    width: 80%;
+                }
             }
         }
     }
@@ -80,10 +116,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 3% 0% 2% 1%;
+    padding: 3% 0% 2% 3%;
+
+    @include laptop {
+        padding: 5% 1% 5% 4%;
+        justify-content: center;
+    }
+
+    @include tablet {
+        width: 100%;
+        height: 100%;  
+        padding: 0% 0% 0% 0%;
+    }
 
     &__title {
-        @include small-title($grey, 0%, $grey, 120%, 32%);
+        @include small-title($grey, 40px, $grey, 120%, 32%);
         text-align: center;
     }
 
@@ -91,30 +138,53 @@
         @include main-txt ($grey);
         height: 80%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-direction: column;
-        padding: 0% 7% 0% 1%;
+        @include tablet {
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__desc {
+            width: 70%;
+        }
 
         &__list {
             height: 90%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            @include laptop {
+                width: 90%;
+                height: 76%;
+            }
 
             &__item {
                 width: 100%;
                 height: 32%;
+                
 
                 .skill {
                     height: 65%;
                     display: flex;
+
+                    &--backend {
+                        justify-content: space-between;
+
+                        .skill__item {
+                            @include laptop {
+                                margin-right: 0%;
+                            }
+                        }
+                    }
 
                     &__item {
                         width: 16%;
                         height: 100%;
                         background: $g1;
                         margin-right: 9%;
-                        @include laptop {
+                        @include desktop {
                             width: 20%;
                         }
                     }

@@ -28,7 +28,12 @@
     padding: 2% 1% 2% 1%;
 
     &__title {
-        @include small-title($black, 0%, $black, 130%, 20%);
+        @include small-title($black, 40px, $black, 130%, 21%);
+        &::after {
+            @include laptop {
+                left: 21%;
+            }
+        }
     }
 
     &__list {

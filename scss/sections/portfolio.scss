@@ -14,7 +14,7 @@
     justify-content: center;
 
     &__txt {
-        @include large-title($black, 0%, 0%, $black, 100%, 35%);
+        @include large-title($black, 70px, 70px, $black, 100%, 35%);
 
         &::before {
             content: ' ';
@@ -36,9 +36,6 @@
     height: 82%;
     width: 100%;
     display: flex;
-    @include laptop {
-    
-    }
 
     &__info {
         background-color: #ebefe2;
@@ -49,14 +46,8 @@
         align-items: center;
 
         &__title {
-            @include small-title($grey, 0, $grey, 130%, 37%);
+            @include small-title($grey, 40px, $grey, 130%, 37%);
             line-height: rem(41px);
-
-            // &:after {
-            //     @include laptop {
-            //         top: 110%;
-            //     }
-            // }
         }
 
         &__techs {
@@ -74,8 +65,12 @@
             border-radius: rem(25px);
             background: $g2;
             transition: .3s;
-            @include laptop {
+            @include desktop {
                 width: 85%;
+            }
+
+            @include laptop {
+                width: 90%;
             }
 
             &:hover {
@@ -100,7 +95,7 @@
             align-items: center;
             text-align: center;
 
-            @include laptop {
+            @include desktop {
                 height: 50%;
             }
         }

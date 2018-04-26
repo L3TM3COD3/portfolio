@@ -1,8 +1,12 @@
 html {
 	font-size: 16px;
 
-	@include laptop {
+	@include desktop {
 		font-size: 16px;
+	}
+
+	@include laptop {
+		font-size: 15px;
 	}
 
 	@include tablet {
