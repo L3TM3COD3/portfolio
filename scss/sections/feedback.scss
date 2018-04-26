@@ -1,5 +1,5 @@
 .feed {
-    height: 1245px;
+    height: rem(1245px);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -27,7 +27,7 @@
 }
 
 .feed__title {
-    height: 170px;
+    height: rem(170px);
     width: 100%;
     background-color: #fff;
     display: flex;
@@ -56,16 +56,21 @@
 
 .feed__list {
     display: flex;
+    justify-content: space-between;
     width: 60%;
     height: 27%;
+    @include laptop {
+        width: 75%;
+    }
 
     &__item {
         display: flex;
-        width: 50%;
+        width: 49%;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         position: relative;
+        border: 1px solid red;
 
         &::before {
             content: ' ';
@@ -86,8 +91,8 @@
 
             &-pic {
                 border-radius: 150%;
-                width: 100px;
-                height: 100px;
+                width: rem(100px);
+                height: rem(100px);
             }
         }
 
@@ -120,13 +125,16 @@
     width: 25%;
     height: 50%;
     background-color:  rgba(218, 219, 214, .5);
-    border-radius: 7px;
+    border-radius: rem(7px);
     padding-top: 1%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    @include laptop {
+        width: 32%;   
+    }
 
     &__title {
         display: flex;
@@ -150,25 +158,25 @@
 
         &__field {
             opacity: .85;
-            border-radius: 25px;
+            border-radius: rem(25px);
             width: 100%;
             height: 17%;
             padding: 5% 5% 5% 7%;
             border: none;
             outline: none;
             @include main-txt($black);
-            border: 2px solid transparent;
+            border: rem(2px) solid transparent;
             transition: .3s;
 
             &:focus {
-                border: 2px solid $g1;
+                border: rem(2px) solid $g1;
             }
         }
 
         #msg {
             resize: none;
             height: 50%;
-            border-radius: 25px;
+            border-radius: rem(25px);
             line-height: 1.6;
         }
     }
@@ -190,7 +198,7 @@
             outline: none;
 
             &:first-child {
-                border-right: 2px solid white;
+                border-right: rem(2px) solid white;
             }
 
             &:hover {

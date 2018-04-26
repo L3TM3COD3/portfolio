@@ -13,7 +13,7 @@
 
     &--blog { 
         width: 100vw;
-        height: 50vh; 
+        height: 65vh; 
         background-size: cover;
     }
 
@@ -63,7 +63,7 @@
         transition: .3s;
 
         &-svg {
-            margin-right: 20px;
+            margin-right: rem(20px);
             transition: .2s;
             fill: white;
 
@@ -74,7 +74,7 @@
     }
 
     &__menu {
-        border: 1px solid red;
+        border: rem(1px) solid red;
         transition: .3s;
         
         &:hover {

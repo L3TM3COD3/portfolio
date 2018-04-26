@@ -1,5 +1,5 @@
 .polygon {
-    border: 5px solid red;
+    border: rem(5px) solid red;
     width: 100%;
     height: 100%;
     padding-left: 3%;
@@ -15,14 +15,14 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
-  margin: 10px 0 0 20px;
+  margin: rem(10px) 0 0 rem(20px);
 }
 
 .checkbox + label {
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   background: $g1;
-  border-radius: 5px;
+  border-radius: rem(5px);
   cursor: pointer;
   position: relative;
 }
@@ -30,8 +30,8 @@
 .checkbox:checked + label::after {
   content: ' ';
   background: url('../../img/icons/check.svg') no-repeat;
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
   position: absolute;
   top: 26%;
   left: 20%;
@@ -41,23 +41,23 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
-  margin: 10px 0 0 20px;
+  margin: rem(10px) 0 0 rem(20px);
 }
 
 .radio-1 + label {
-  width: 30px;
-  height: 30px;
+  width: rem(30px);
+  height: rem(30px);
   border-radius: 55%;
   cursor: pointer;
-  border: 1px solid $black;
+  border: rem(1px) solid $black;
   background: white;
   position: relative;
 }
 
 .radio-1:checked + label::after {
   content: ' ';
-  width: 10px;
-  height: 10px;
+  width: rem(10px);
+  height: rem(10px);
   background-color: $g1;
   position: absolute;
   border-radius: 50%;
@@ -71,13 +71,13 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
-  margin: 10px 0 0 20px;
+  margin: rem(10px) 0 0 rem(20px);
 }
 
 .radio-2 + label {
-  width: 30px;
-  height: 30px;
-  border: 1px solid $black;
+  width: rem(30px);
+  height: rem(30px);
+  border: rem(1px) solid $black;
   background: white;
   border-radius: 55%;
   cursor: pointer;
@@ -86,8 +86,8 @@
 
 .radio-2:checked + label::after {
   content: ' ';
-  width: 10px;
-  height: 10px;
+  width: rem(10px);
+  height: rem(10px);
   background-color: $g1;
   position: absolute;
   border-radius: 50%;
@@ -99,19 +99,19 @@
   color: red;
   position: absolute;
   left: 150%;     
-  width: 100px; 
+  width: rem(100px); 
 }
 
 .yes {
   color: $g2;
   position: absolute;
   left: 150%;
-  width: 100px;
+  width: rem(100px);
 }
 
 .human {
   color: $g1;
   position: absolute;
   left: 150%;
-  width: 100px;
+  width: rem(100px);
 }

@@ -36,6 +36,9 @@
     height: 82%;
     width: 100%;
     display: flex;
+    @include laptop {
+    
+    }
 
     &__info {
         background-color: #ebefe2;
@@ -47,7 +50,13 @@
 
         &__title {
             @include small-title($grey, 0, $grey, 130%, 37%);
-            line-height: 41px;
+            line-height: rem(41px);
+
+            // &:after {
+            //     @include laptop {
+            //         top: 110%;
+            //     }
+            // }
         }
 
         &__techs {
@@ -62,9 +71,12 @@
             align-items: center;
             height: 15%;
             width: 60%;
-            border-radius: 25px;
+            border-radius: rem(25px);
             background: $g2;
             transition: .3s;
+            @include laptop {
+                width: 85%;
+            }
 
             &:hover {
                 background-color: $g1;
@@ -87,6 +99,10 @@
             justify-content: space-between;
             align-items: center;
             text-align: center;
+
+            @include laptop {
+                height: 50%;
+            }
         }
     }
 

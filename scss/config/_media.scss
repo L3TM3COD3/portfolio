@@ -1,0 +1,23 @@
+//values 
+$laptop: 1280px;
+$tablet: 1030px;
+$phone: 992px;
+
+//adaptive
+@mixin laptop {
+    @media screen and (max-width: $laptop) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media screen and (max-width: $tablet) {
+      @content;
+    }
+  }
+  
+  @mixin phone {
+    @media screen and (max-width: $phone) {
+      @content;
+    }
+  }

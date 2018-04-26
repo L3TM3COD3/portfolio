@@ -12,14 +12,14 @@
 }
 
 .auth__main {
-    width: 380px;
-    height: 426px;
+    width: rem(380px);
+    height: rem(426px);
     background: rgba(18, 38, 32, .6);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: rem(7px);
+    border-bottom-right-radius: rem(7px);
     overflow: hidden;
 
     &__dis {
@@ -29,10 +29,10 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding-top: 30px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 30px;
+        padding-top: rem(30px);
+        padding-left: rem(20px);
+        padding-right: rem(20px);
+        padding-bottom: rem(30px);
 
         &__title {
             @include small-title(white, 0%, white, 120%, 30%);
@@ -60,8 +60,8 @@
                         height: 100%;
                         width: 12%;
                         background-color: #f0efe9;
-                        border-top-left-radius: 25px;
-                        border-bottom-left-radius: 25px;
+                        border-top-left-radius: rem(25px);
+                        border-bottom-left-radius: rem(25px);
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -74,19 +74,19 @@
                     &__input {
                         width: 88%;
                         height: 100%;
-                        border-top-right-radius: 25px;
-                        border-bottom-right-radius: 25px;
+                        border-top-right-radius: rem(25px);
+                        border-bottom-right-radius: rem(25px);
                         outline: none;
                         border: none;
-                        padding-left: 15px;
-                        font-size: 16px;
+                        padding-left: rem(15px);
+                        font-size: rem(16px);
                         font-family: roboto;
                         color: #373e42;
                         transition: .3s;
-                        border: 2px solid transparent;
+                        border: rem(2px) solid transparent;
 
                         &:focus {
-                            border: 2px solid $g2;
+                            border: rem(2px) solid $g2;
                         }
                     }
                 }
@@ -112,7 +112,7 @@
                         opacity: 0.8;
                         color: #ffffff;
                         font-family: Roboto;
-                        font-size: 16px;    
+                        font-size: rem(16px);    
                         width: 370%;
                    }
 
@@ -120,13 +120,13 @@
                         position: absolute;
                         z-index: -1;
                         opacity: 0;
-                        margin: 10px 0 0 20px;
+                        margin: rem(10px) 0 0 rem(20px);
 
                         & + label {
-                            width: 22px;
-                            height: 22px;
+                            width: rem(22px);
+                            height: rem(22px);
                             background: $g1;
-                            border-radius: 3px;
+                            border-radius: rem(3px);
                             cursor: pointer;
                             position: relative;
                             margin-left: 32%;
@@ -136,8 +136,8 @@
                             content: ' ';
                             background: url('../../img/icons/check.svg') no-repeat;
                             background-size: contain;
-                            width: 12px;
-                            height: 9px;
+                            width: rem(12px);
+                            height: rem(9px);
                             position: absolute;
                             top: 30%;
                             left: 25%;
@@ -177,7 +177,7 @@
                             opacity: 0.8;
                             color: #ffffff;
                             font-family: Roboto;
-                            font-size: 16px;    
+                            font-size: rem(16px);    
                             width: 400%;
                            }
 
@@ -185,12 +185,12 @@
                                 position: absolute;
                                 z-index: -1;
                                 opacity: 0;
-                                margin: 10px 0 0 20px;
+                                margin: rem(10px) 0 0 rem(20px);
 
                                 & + label {
-                                    width: 21px;
-                                    height: 21px;
-                                    border: 1px solid #cccccc;
+                                    width: rem(21px);
+                                    height: rem(21px);
+                                    border: rem(1px) solid #cccccc;
                                     background-color: #ffffff;
                                     border-radius: 50%;
                                     cursor: pointer;
@@ -199,8 +199,8 @@
 
                                 &:checked + label::after {
                                     content: ' ';
-                                    width: 15px;
-                                    height: 15px;
+                                    width: rem(15px);
+                                    height: rem(15px);
                                     background-color: $g1;
                                     position: absolute;
                                     border-radius: 50%;
@@ -222,19 +222,19 @@
                             opacity: 0.8;
                             color: #ffffff;
                             font-family: Roboto;
-                            font-size: 16px;
+                            font-size: rem(16px);
                            }
 
                            &__radio {
                                 position: absolute;
                                 z-index: -1;
                                 opacity: 0;
-                                margin: 10px 0 0 20px;
+                                margin: rem(10px) 0 0 rem(20px);
 
                                 & + label {
-                                    width: 21px;
-                                    height: 21px;
-                                    border: 1px solid #cccccc;
+                                    width: rem(21px);
+                                    height: rem(21px);
+                                    border: rem(1px) solid #cccccc;
                                     background-color: #ffffff;
                                     border-radius: 50%;
                                     cursor: pointer;
@@ -243,8 +243,8 @@
 
                                 &:checked + label::after {
                                     content: ' ';
-                                    width: 15px;
-                                    height: 15px;
+                                    width: rem(15px);
+                                    height: rem(15px);
                                     background-color: $g1;
                                     position: absolute;
                                     border-radius: 50%;
@@ -275,7 +275,7 @@
             font-family: robotomedium;
 
             &--bordered {
-                border-left: 2px solid white;
+                border-left: rem(2px) solid white;
             }
 
             &:hover {
@@ -290,5 +290,5 @@
     bottom: 5%;
     color: white;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: rem(16px);
 }
