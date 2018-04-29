@@ -88,7 +88,14 @@
                 margin-top: 3%;
 
                 &--blog {
-                    @include large-title(white, 0px, 13%, white, 107%, 15%);
+                    @include large-title(white);
+                    &:after {
+                        margin-bottom: 25px; 
+                        @include tablet {
+                            margin-bottom: 12px;
+                        }
+                    }
+                   
                 }
             }
 

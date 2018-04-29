@@ -26,14 +26,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 2% 1% 2% 1%;
+    @include tablet {
+        width: 40%;
+        height: 27%;
+    }
 
     &__title {
-        @include small-title($black, 40px, $black, 130%, 21%);
-        &::after {
-            @include laptop {
-                left: 21%;
-            }
-        }
+        @include small-title($black);
     }
 
     &__list {
@@ -42,6 +41,9 @@
         flex-direction: column;
         justify-content: space-between;
         width: 90%;
+        @include tablet {
+            height: 67%;
+        }
 
         &__item {
             display: flex;

@@ -63,6 +63,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 2.5% 0 2.5%;
+    @include tablet {
+        padding: 0 5.7% 0 5.7%;
+    }
 
     &--blog {
         height: 15%;
@@ -109,6 +112,18 @@
                 fill: #ebefe2;
             } 
         }
+
+        .cls-1--works, .cls-2--works {
+            @include tablet {
+                fill: #f8f9f5;
+            } 
+        }
+
+        .cls-1--blog, .cls-2--blog {
+            @include tablet {
+                fill: #F9F8F0;
+            } 
+        }
     }
 }
 
@@ -125,4 +140,19 @@
     z-index: -1;
     position: absolute;
     top: 20%;
+}
+
+.arrow-down {
+    position: absolute;
+    top: 90%;
+    opacity: .5;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+
+    &:hover {
+        opacity: 1;
+    }
 }

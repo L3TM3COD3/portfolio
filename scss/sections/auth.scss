@@ -35,7 +35,7 @@
         padding-bottom: rem(30px);
 
         &__title {
-            @include small-title(white, 40px, white, 120%, 30%);
+            @include small-title(white);
         }
 
         &__form {

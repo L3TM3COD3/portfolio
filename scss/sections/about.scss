@@ -21,7 +21,9 @@
 
     @include tablet {
         width: 100%;
+        height: 830px;
         align-items: center;
+        padding: 3% 0% 5% 0%;
     }
 
     &__title {
@@ -33,7 +35,7 @@
 
         &__txt {
             text-align: center;
-            @include large-title($black, 0px, 70px, $black, 105%, 30%);
+            @include large-title($black);
 
             &::before {
                 content: ' ';
@@ -49,10 +51,10 @@
                 width: 170%;
 
                 @include laptop {
-                    left: -10%;
-                    top: -30%;
-                    width: 135%;
-                    height: 135%;
+                    left: -30%;
+                    top: -50%;
+                    width: 170%;
+                    height: 170%;
                 }
             }
         }
@@ -63,15 +65,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 75%;
+        height: 80%;
         width: 55%;
+        @include tablet {
+            height: 85%;
+        }
 
         &__photo{
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 10%;
 
             &__pic {
                 max-width: 55%;
@@ -80,18 +84,16 @@
 
         &__desc {
             display: flex;
-            height: 45%;
+            height: 50%;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            @include tablet {
+                height: 40%;
+            }
 
             &__title {
-                @include small-title($grey, 40px, $grey, 120%, -5%);
-                &::after {
-                    @include desktop {
-                        left: -5%;  
-                    }
-                }
+                @include small-title($grey);
             }
 
             &__txt {
@@ -125,13 +127,12 @@
 
     @include tablet {
         width: 100%;
-        height: 100%;  
-        padding: 0% 0% 0% 0%;
+        height: 815px;  
+        padding: 0% 5% 0% 5%;
     }
 
     &__title {
-        @include small-title($grey, 40px, $grey, 120%, 32%);
-        text-align: center;
+        @include small-title($grey);
     }
 
     &__info {
@@ -141,12 +142,15 @@
         justify-content: space-around;
         flex-direction: column;
         @include tablet {
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
         }
 
         &__desc {
-            width: 70%;
+            width: 68%;
+            @include tablet {
+                text-align: center;
+            }
         }
 
         &__list {
@@ -159,34 +163,35 @@
                 width: 90%;
                 height: 76%;
             }
+            @include tablet {
+                width: 100%;
+            }
 
             &__item {
                 width: 100%;
-                height: 32%;
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @include tablet {
+                    align-items: center;
+                }
                 
 
                 .skill {
-                    height: 65%;
                     display: flex;
+                    justify-content: space-between;
+                    width: 65%; 
 
                     &--backend {
                         justify-content: space-between;
-
-                        .skill__item {
-                            @include laptop {
-                                margin-right: 0%;
-                            }
-                        }
+                        width: 90%;
                     }
 
                     &__item {
-                        width: 16%;
-                        height: 100%;
+                        width: 111px;
+                        height: 111px;
                         background: $g1;
-                        margin-right: 9%;
-                        @include desktop {
-                            width: 20%;
-                        }
                     }
                 }
 
@@ -194,6 +199,9 @@
                     color: $grey;
                     font-family: robotomedium;
                     font-size: rem(28px);
+                    @include tablet {
+                        text-align: center;
+                    }
                 }
             }
         }
