@@ -66,6 +66,9 @@
     @include tablet {
         padding: 0 5.7% 0 5.7%;
     }
+    @include phone {
+        padding: 1% 6% 0% 6%
+    }
 
     &--blog {
         height: 15%;
@@ -81,6 +84,10 @@
             margin-right: rem(20px);
             transition: .2s;
             fill: white;
+            @include phone {
+                width: 65%;
+                height: 65%;
+            }
 
             &:hover {
                 opacity: .7;
@@ -90,6 +97,13 @@
 
     &__menu {   
         transition: .3s;
+    
+        #burger-menu {
+            @include phone {
+                width: 90%;
+                height: 90%;
+            }
+        }
         
         &:hover {
             opacity: .7;
